@@ -1,6 +1,3 @@
-
-Michal To Dzban, hehehehe
-
 package pl.exercise;
 
 public class App {

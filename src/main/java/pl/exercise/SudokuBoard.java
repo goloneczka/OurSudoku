@@ -15,9 +15,9 @@ public class SudokuBoard {
     Random rand = new Random();
 
     public SudokuBoard() {
-        board[0][0] = rand.nextInt(9) + 1;
-        board[N / 3][N / 3] = rand.nextInt(9) + 1;
-        board[2 * N / 3][2 * N / 3] = rand.nextInt(9) + 1;
+        board[0][1] = rand.nextInt(9) + 1;
+        board[N / 3][N / 3 + 1] = rand.nextInt(9) + 1;
+        board[2 * N / 3][2 * N / 3 + 1] = rand.nextInt(9) + 1;
     }
 
     private boolean add(int row, int column, int value) {
@@ -32,17 +32,6 @@ public class SudokuBoard {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (value == board[r * 3 + i][c * 3 + j]) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    private boolean isFull() {
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                if (board[i][j] == 0) {
                     return false;
                 }
             }
@@ -67,10 +56,9 @@ public class SudokuBoard {
 
 
     public boolean fillBoard() {
-        if (isFull()) {
+        if (whereIsNull() == null) {
             return true;
         }
-
         for (int k = 1; k <= N; k++) {
             Point point = whereIsNull();
             if (add(point.row, point.column, k)) {
