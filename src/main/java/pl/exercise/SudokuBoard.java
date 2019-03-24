@@ -6,9 +6,12 @@ import static java.lang.Math.*;
 public class SudokuBoard {
 
     private static final int N = 9;
+
+
+
     private Point[][] board=new Point[N][N];
-    Random rand  = new Random();
-    boolean czyJestElementLosowy = false;
+    private Random rand  = new Random();
+    private boolean czyJestElementLosowy = false;
 
     public SudokuBoard() {
         //generuje puste sudoku
@@ -57,7 +60,7 @@ public class SudokuBoard {
             wypelnijJedenElementLosowo();
         }
         Point point = whereIsZero();
-        if (point==null) {
+        if (point == null) {
             czyJestElementLosowy=false;
             return true;
         }
@@ -75,7 +78,7 @@ public class SudokuBoard {
         return false;
 
     }
-    
+
     private void wypelnijJedenElementLosowo() {
         Point point = whereIsZero();
 
@@ -106,6 +109,9 @@ public class SudokuBoard {
             System.out.println();
         }
         System.out.println();
+    }
+    public Point[][] getBoard() {
+        return board;
     }
 }
 
