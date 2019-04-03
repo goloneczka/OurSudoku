@@ -47,15 +47,6 @@ public class SudokuBoard {
         board[punkt.getX()][punkt.getY()] = punkt;
     }
 
-    public void displayBoard() {
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                System.out.print(board[i][j].getValue());
-            }
-            System.out.println();
-        }
-        System.out.println();
-    }
 
     // nie usuwa stalych point!
     public void clearBoard() {

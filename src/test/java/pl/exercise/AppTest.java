@@ -13,6 +13,27 @@ public class AppTest {
     SudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
 
     @Test
+    public void InitialSudokuBoard()
+    {
+        boolean test = true;
+        for(int i=0; i<9; i++)
+        {
+            for(int j=0;j<9;j++)
+            {
+                if(sudokuBoard.get(i,j).getValue() != 0)
+                {
+                    test = false;
+                }
+            }
+        }
+        sudokuBoard.set(2,2,5);
+             if(sudokuBoard.get(2,2).getValue() != 5) {
+                 test = false;
+             }
+        assertTrue(test);
+    }
+
+    @Test
     public void goodFillBoard() {
         boolean test = true;
         int ilePowinnoByc = 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1;
@@ -97,4 +118,6 @@ public class AppTest {
         }
         assertTrue(test);
     }
+
+
 }

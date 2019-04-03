@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6536eea5-80e3-4a90-84a0-14898658472a" name="Default Changelist" comment="">
+    <list default="true" id="6536eea5-80e3-4a90-84a0-14898658472a" name="Default Changelist" comment="Testy pokrywaja calosc w 83%">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/exercise/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/exercise/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/exercise/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/exercise/SudokuBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/exercise/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/exercise/AppTest.java" afterDir="false" />
@@ -34,22 +33,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/exercise/SudokuBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+            <state relative-caret-position="987">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
-                <element signature="e#960#961#0" expanded="true" />
-                <element signature="e#994#995#0" expanded="true" />
+                <element signature="e#1885#1886#0" expanded="true" />
                 <element signature="e#1913#1914#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/site/jacoco/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="3065" lean-forward="true" selection-start-column="3065" selection-end-column="3065" />
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -57,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pl/exercise/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="90" column="45" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
+            <state relative-caret-position="1717">
+              <caret line="86" column="33" lean-forward="true" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/exercise/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            <state relative-caret-position="427">
+              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -78,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/exercise/BacktrackingSudokuSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-252">
-              <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+            <state relative-caret-position="1218">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
@@ -87,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/exercise/Point.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
+            <state relative-caret-position="462">
               <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
               <folding>
                 <element signature="e#504#505#0" expanded="true" />
@@ -127,10 +125,10 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/exercise/Point.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/exercise/SudokuSolver.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pl/exercise/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/exercise/BacktrackingSudokuSolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/exercise/App.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/exercise/AppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/exercise/SudokuBoard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/exercise/App.java" />
       </list>
     </option>
   </component>
@@ -175,8 +173,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,7 +256,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553942345470" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554281325498" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -281,7 +279,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.exercise.App" />
       <module name="Sudoku" />
@@ -308,6 +306,22 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.InitialSudokuBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sudoku" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.exercise" />
+      <option name="MAIN_CLASS_NAME" value="pl.exercise.AppTest" />
+      <option name="METHOD_NAME" value="InitialSudokuBoard" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -427,13 +441,15 @@
       <item itemvalue="JUnit.AppTest.rozneWypelnieniaFillBoard" />
       <item itemvalue="Maven.Sudoku [install]" />
       <item itemvalue="Maven.Sudoku [checkstyle:checkstyle]" />
+      <item itemvalue="JUnit.AppTest.InitialSudokuBoard" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.AppTest.goodFillBoard" />
+        <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.rozneWypelnieniaFillBoard" />
+        <item itemvalue="JUnit.AppTest.InitialSudokuBoard" />
+        <item itemvalue="JUnit.AppTest.goodFillBoard" />
       </list>
     </recent_temporary>
   </component>
@@ -461,20 +477,21 @@
       <workItem from="1553688441932" duration="2426000" />
       <workItem from="1553691679224" duration="1030000" />
       <workItem from="1553718100327" duration="2140000" />
-      <workItem from="1553936273877" duration="6034000" />
+      <workItem from="1553936273877" duration="7112000" />
+      <workItem from="1554101269805" duration="188000" />
+      <workItem from="1554279053962" duration="2266000" />
     </task>
+    <task id="LOCAL-00001" summary="Rozdzielenie Sudoku na klasy: Board i Solver. Testy pokrywaja calosc w 65%">
+      <created>1553942505983</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553942505983</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest - 2019.03.24 at 09h 21m 01s.xml">
-      <configuration name="AppTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_goodFillBoard - 2019.03.25 at 13h 25m 06s.xml">
-      <configuration name="AppTest.goodFillBoard" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppTest_rozneWypelnieniaFillBoard - 2019.03.25 at 13h 25m 17s.xml">
-      <configuration name="AppTest.rozneWypelnieniaFillBoard" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AppTest_rozneWypelnieniaFillBoard - 2019.03.25 at 13h 26m 28s.xml">
       <configuration name="AppTest.rozneWypelnieniaFillBoard" configurationId="JUnit" />
     </history-entry>
@@ -496,9 +513,18 @@
     <history-entry file="AppTest - 2019.03.30 at 11h 26m 44s.xml">
       <configuration name="AppTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AppTest_InitialSudokuBoard - 2019.04.03 at 10h 20m 23s.xml">
+      <configuration name="AppTest.InitialSudokuBoard" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest_rozneWypelnieniaFillBoard - 2019.04.03 at 10h 36m 35s.xml">
+      <configuration name="AppTest.rozneWypelnieniaFillBoard" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppTest - 2019.04.03 at 10h 36m 44s.xml">
+      <configuration name="AppTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46716000" />
+    <option name="totallyTimeSpent" value="50248000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -513,7 +539,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20134228" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20671141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -545,7 +571,7 @@
       <window_info anchor="right" id="Maven Projects" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12281879" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20671141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -554,26 +580,27 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26487252" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37677053" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39818418" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32719547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Database" order="4" weight="0.3295302" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.3295302" />
+      <window_info anchor="right" id="Maven" order="6" visible="true" weight="0.3295302" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,6 +656,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Rozdzielenie Sudoku na klasy: Board i Solver. Testy pokrywaja calosc w 65%" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rozdzielenie Sudoku na klasy: Board i Solver. Testy pokrywaja calosc w 65%" />
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
@@ -673,9 +704,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa11272.35244/App.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa11272.34985/Greeter.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa11272.37575/GreeterTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/exercise/BacktrackingSudokuSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1218">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/exercise/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
+        <state relative-caret-position="462">
           <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding>
             <element signature="e#504#505#0" expanded="true" />
@@ -686,38 +727,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/exercise/BacktrackingSudokuSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/exercise/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pl/exercise/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="90" column="45" selection-start-line="90" selection-start-column="45" selection-end-line="90" selection-end-column="45" />
+        <state relative-caret-position="1717">
+          <caret line="86" column="33" lean-forward="true" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/exercise/SudokuBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding>
-            <element signature="e#960#961#0" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-            <element signature="e#1913#1914#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -725,7 +740,25 @@
     <entry file="file://$PROJECT_DIR$/target/site/jacoco/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="3065" lean-forward="true" selection-start-column="3065" selection-end-column="3065" />
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/exercise/SudokuBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#1885#1886#0" expanded="true" />
+            <element signature="e#1913#1914#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/exercise/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
         </state>
       </provider>
     </entry>
