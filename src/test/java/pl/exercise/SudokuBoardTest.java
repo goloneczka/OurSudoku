@@ -1,13 +1,8 @@
 package pl.exercise;
-
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-
-/**
- * Unit test for simple App.
- */
-public class AppTest {
+public class SudokuBoardTest {
 
     SudokuBoard sudokuBoard = new SudokuBoard();
     SudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
@@ -20,16 +15,16 @@ public class AppTest {
         {
             for(int j=0;j<9;j++)
             {
-                if(sudokuBoard.get(i,j).getValue() != 0)
+                if(sudokuBoard.get(i,j).getFieldValue() != 0)
                 {
                     test = false;
                 }
             }
         }
         sudokuBoard.set(2,2,5);
-             if(sudokuBoard.get(2,2).getValue() != 5) {
-                 test = false;
-             }
+        if(sudokuBoard.get(2,2).getFieldValue() != 5) {
+            test = false;
+        }
         assertTrue(test);
     }
 
@@ -42,7 +37,7 @@ public class AppTest {
         for (int i = 0; i < 9; i++) {
             int iloczyn = 1;
             for (int j = 0; j < 9; j++) {
-                iloczyn *= sudokuBoard.get(i, j).getValue();
+                iloczyn *= sudokuBoard.get(i, j).getFieldValue();
             }
             if (iloczyn != ilePowinnoByc) {
                 test = false;
@@ -52,7 +47,7 @@ public class AppTest {
         for (int i = 0; i < 9; i++) {
             int iloczyn = 1;
             for (int j = 0; j < 9; j++) {
-                iloczyn *= sudokuBoard.get(i, j).getValue();
+                iloczyn *= sudokuBoard.get(i, j).getFieldValue();
             }
             if (iloczyn != ilePowinnoByc) {
                 test = false;
@@ -65,7 +60,7 @@ public class AppTest {
             for (int i = x; i < 3 + x; i++) {
 
                 for (int j = y; j < 3 + y; j++) {
-                    iloczyn *= sudokuBoard.get(i, j).getValue();
+                    iloczyn *= sudokuBoard.get(i, j).getFieldValue();
                 }
             }
             if (iloczyn != ilePowinnoByc) {
@@ -90,7 +85,7 @@ public class AppTest {
         for (int i = 0; i < 9; i++) {
 
             for (int j = 0; j < 9; j++) {
-                board[i][j] = sudokuBoard.getBoard()[i][j].getValue();
+                board[i][j] = sudokuBoard.getBoard().get(i).get(j).getFieldValue();
             }
         }
 
@@ -101,7 +96,7 @@ public class AppTest {
 
             for (int j = 0; j < 9; j++) {
 
-                board2[i][j] = sudokuBoard.getBoard()[i][j].getValue();
+                board2[i][j] = sudokuBoard.getBoard().get(i).get(j).getFieldValue();
             }
         }
 
@@ -119,5 +114,19 @@ public class AppTest {
         assertTrue(test);
     }
 
+    @Test
+    public void badFillSudoku() {
+        sudokuBoard.clearBoard();
+        sudokuBoard.set(1,1,1);
+        // kolejne set nie zadziala i bedzie zero
+        sudokuBoard.set(1,2,1);
+        sudokuBoard.set(2,1,1);
+        sudokuBoard.set(2,2,1);
 
+        boolean test = false;
+        if(sudokuBoard.get(1,2).getFieldValue()==0 && sudokuBoard.get(2,1).getFieldValue()==0 && sudokuBoard.get(2,2).getFieldValue()==0) {
+            test=true;
+        }
+        assertTrue(test);
+    }
 }

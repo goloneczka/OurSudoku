@@ -1,33 +1,53 @@
 package pl.exercise;
-import java.util.Random;
+
+
+
+import org.apache.commons.collections.list.FixedSizeList;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class SudokuBoard {
 
     private static final int N = 9;
-    private Point[][] board = new Point[N][N];
+
+
+
+    private List<List<SudokuField>> board;
+
+
 
     public SudokuBoard() {
-        //generuje puste sudoku
+        //generuje liste
+       // Arrays.asList(new [100]);
+        board = FixedSizeList.decorate(Arrays.asList(new List[N]));
+
+        // this.board = Arrays.asList(new List[N]);
+      //  board = new ArrayList<>(N);
+        //dodaje listy do listy
+        for (int i=0; i < N; i++) {
+            board.set(i, Arrays.asList(new SudokuField[N]));
+        }
+        // dodaje puste pola
         for (int i=0; i < N; i++) {
             for (int j=0; j < N; j++) {
-                this.board[i][j]= new Point(i, j, 0, false);
+                board.get(i).set(j, new SudokuField(i, j, 0));
             }
         }
     }
 
-    // Zakladam ze check Board ma sprawdzac te poczatkowe punkty wprowadzane przez uytkownika
-    private boolean checkBoard(int x, int y, int value) {
-        for (int i=0; i < N; i++) {
-            if (value == board[x][i].getValue() || value == board[i][y].getValue()) {
+    // ChceckBoard ktore sprawdza cale  sudoku
+    private boolean checkBoard() {
+        for (int i = 0; i < N; i++) {
+            if (!getRow(i).verify() || !getColumn(i).verify()) {
                 return false;
             }
         }
-        int r = x / 3;
-        int c = y / 3;
-        for (int i=0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
             for (int j=0; j < 3; j++) {
-                if (value == board[r * 3 + i][c * 3 + j].getValue()) {
+                if (!getBox(i, j).verify()) {
                     return false;
                 }
             }
@@ -35,33 +55,61 @@ public class SudokuBoard {
         return true;
     }
 
-    public Point get(int i, int j) {
-        return board[i][j];
+    public SudokuField get(int i, int j) {
+        return board.get(i).get(j);
     }
 
     public void set(int i, int j, int k) {
-        if (!checkBoard(i, j, k)) {
-            return;
+        SudokuField punkt = new SudokuField(i, j, k, true);
+        board.get(punkt.getX()).set(punkt.getY(), punkt);
+        // sprawdzam cale sudoku i jak nie pasuje to zeruje ten punkt
+        if (!checkBoard()) {
+            punkt.setFieldValue(0);
+            board.get(punkt.getX()).set(punkt.getY(), punkt);
         }
-        Point punkt = new Point(i, j, k, true);
-        board[punkt.getX()][punkt.getY()] = punkt;
+        return;
     }
 
-
-    // nie usuwa stalych point!
+    // nie usuwa stalych sudokuField!
     public void clearBoard() {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                if (!board[i][j].isConstPoint()) {
-                    board[i][j].setValue(0);
+                if (!board.get(i).get(j).isConstPoint()) {
+                    board.get(i).get(j).setFieldValue(0);
                 }
             }
         }
     }
 
-    public Point[][] getBoard() {
+    public List<List<SudokuField>> getBoard() {
         return board;
     }
+
+    public SudokuRow getRow(int y) {
+        ArrayList<SudokuField> list= new ArrayList<SudokuField>(N);
+        for (int i = 0; i < N; i++) {
+            list.add(i, get(y, i));
+        }
+        return new SudokuRow(list);
+    }
+    public SudokuColumn getColumn(int x) {
+        ArrayList<SudokuField> list= new ArrayList<SudokuField>(N);
+        for (int i = 0; i < N; i++) {
+            list.add(i, get(i, x));
+        }
+        return new SudokuColumn(list);
+    }
+    public SudokuBox getBox(int x, int y) {
+        ArrayList<SudokuField> list= new ArrayList<SudokuField>(N);
+        for (int i=0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                list.add(i, get((x / 3) * 3 + i, (y / 3) * 3 + j));
+            }
+        }
+        return new SudokuBox(list);
+    }
+
+
 
 
 }

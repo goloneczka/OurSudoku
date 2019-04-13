@@ -42,6 +42,11 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>commons-collections</groupId>
+          <artifactId>commons-collections</artifactId>
+          <version>3.2.1</version>
+      </dependency>
   </dependencies>
 
   <build>
@@ -61,6 +66,8 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
         </plugin>
+
+
 
         <plugin>
           <groupId>org.jacoco</groupId>
@@ -101,6 +108,8 @@
             </execution>
           </executions>
         </plugin>
+
+
 
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>

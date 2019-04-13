@@ -5,7 +5,7 @@ public class App {
 
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                System.out.print(sudokuBoard.get(i, j).getValue());
+                System.out.print(sudokuBoard.get(i, j).getFieldValue());
             }
             System.out.println();
         }
@@ -13,6 +13,7 @@ public class App {
     }
 
     public static void main(final String[] args) {
+
 
         SudokuBoard sudokuBoard = new SudokuBoard();
         sudokuBoard.set(2, 2, 2);
