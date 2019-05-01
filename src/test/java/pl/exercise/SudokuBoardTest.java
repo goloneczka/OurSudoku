@@ -129,4 +129,50 @@ public class SudokuBoardTest {
         }
         assertTrue(test);
     }
+
+    @Test
+    public void equalsAttempts()
+    {
+        sudokuBoard.clearBoard();
+        sudokuSolver.solve(sudokuBoard);
+        boolean test = true;
+        SudokuBoard sudokuBoard1 = new SudokuBoard(sudokuBoard);
+
+        if( !sudokuBoard.equals(sudokuBoard1) ) {
+            test = false;
+        }
+        sudokuBoard.clearBoard();
+        if( sudokuBoard.equals(sudokuBoard1) ) {
+            test = false;
+        }
+        sudokuBoard1.clearBoard();
+        if( !sudokuBoard.equals(sudokuBoard1) ) {
+            test = false;
+        }
+
+        assertTrue(test);
+    }
+
+    @Test
+    public void HashCodeAttempts()
+    {
+        sudokuBoard.clearBoard();
+        sudokuSolver.solve(sudokuBoard);
+        boolean test = true;
+        SudokuBoard sudokuBoard1 = new SudokuBoard(sudokuBoard);
+
+        if( sudokuBoard.hashCode() != sudokuBoard1.hashCode() ) {
+            test = false;
+        }
+        sudokuBoard.clearBoard();
+        if( sudokuBoard.hashCode() == sudokuBoard1.hashCode() ) {
+            test = false;
+        }
+        sudokuBoard1.clearBoard();
+        if( sudokuBoard.hashCode() != sudokuBoard1.hashCode() ) {
+            test = false;
+        }
+
+        assertTrue(test);
+    }
 }

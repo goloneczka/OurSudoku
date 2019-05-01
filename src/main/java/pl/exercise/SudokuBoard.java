@@ -1,8 +1,10 @@
 package pl.exercise;
 
 
-
 import org.apache.commons.collections.list.FixedSizeList;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,31 +14,44 @@ import java.util.List;
 public class SudokuBoard {
 
     private static final int N = 9;
-
-
-
     private List<List<SudokuField>> board;
-
 
 
     public SudokuBoard() {
         //generuje liste
-       // Arrays.asList(new [100]);
+        // Arrays.asList(new [100]);
         board = FixedSizeList.decorate(Arrays.asList(new List[N]));
 
-        // this.board = Arrays.asList(new List[N]);
-      //  board = new ArrayList<>(N);
-        //dodaje listy do listy
-        for (int i=0; i < N; i++) {
+        for (int i = 0; i < N; i++) {
             board.set(i, Arrays.asList(new SudokuField[N]));
         }
         // dodaje puste pola
-        for (int i=0; i < N; i++) {
-            for (int j=0; j < N; j++) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
                 board.get(i).set(j, new SudokuField(i, j, 0));
             }
         }
     }
+
+    // Konstruktor se kopiujacy
+    public SudokuBoard(final SudokuBoard sudokuBoard) {
+        board = FixedSizeList.decorate(Arrays.asList(new List[N]));
+
+        for (int i = 0; i < N; i++) {
+            board.set(i, Arrays.asList(new SudokuField[N]));
+        }
+        // dodaje puste pola
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (sudokuBoard.get(i, j).isConstPoint()) {
+                    board.get(i).set(j, new SudokuField(i, j, sudokuBoard.get(i, j).getFieldValue(), true));
+                } else {
+                    board.get(i).set(j, new SudokuField(i, j, sudokuBoard.get(i, j).getFieldValue()));
+                }
+            }
+        }
+    }
+
 
     // ChceckBoard ktore sprawdza cale  sudoku
     private boolean checkBoard() {
@@ -46,7 +61,7 @@ public class SudokuBoard {
             }
         }
         for (int i = 0; i < 3; i++) {
-            for (int j=0; j < 3; j++) {
+            for (int j = 0; j < 3; j++) {
                 if (!getBox(i, j).verify()) {
                     return false;
                 }
@@ -86,22 +101,24 @@ public class SudokuBoard {
     }
 
     public SudokuRow getRow(int y) {
-        ArrayList<SudokuField> list= new ArrayList<SudokuField>(N);
+        ArrayList<SudokuField> list = new ArrayList<SudokuField>(N);
         for (int i = 0; i < N; i++) {
             list.add(i, get(y, i));
         }
         return new SudokuRow(list);
     }
+
     public SudokuColumn getColumn(int x) {
-        ArrayList<SudokuField> list= new ArrayList<SudokuField>(N);
+        ArrayList<SudokuField> list = new ArrayList<SudokuField>(N);
         for (int i = 0; i < N; i++) {
             list.add(i, get(i, x));
         }
         return new SudokuColumn(list);
     }
+
     public SudokuBox getBox(int x, int y) {
-        ArrayList<SudokuField> list= new ArrayList<SudokuField>(N);
-        for (int i=0; i < 3; i++) {
+        ArrayList<SudokuField> list = new ArrayList<SudokuField>(N);
+        for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 list.add(i, get((x / 3) * 3 + i, (y / 3) * 3 + j));
             }
@@ -109,8 +126,31 @@ public class SudokuBoard {
         return new SudokuBox(list);
     }
 
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this).
+                append("Pola Sudoku: ", board).toString();
+    }
 
+    @Override
+    public boolean equals(final Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+        if (obj.getClass() != getClass()) {
+            return false;
+        }
+        return EqualsBuilder.reflectionEquals(this, obj);
+    }
 
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 31).
+                append(board).toHashCode();
 
+    }
 }
 

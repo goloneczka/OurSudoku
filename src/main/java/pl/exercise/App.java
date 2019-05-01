@@ -19,7 +19,7 @@ public class App {
         sudokuBoard.set(2, 2, 2);
         SudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
         sudokuSolver.solve(sudokuBoard);
-        display(sudokuBoard);
+        System.out.println(sudokuBoard);
         sudokuBoard.clearBoard();
         display(sudokuBoard);
         sudokuSolver.solve(sudokuBoard);
