@@ -48,9 +48,7 @@ public class SudokuField {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).
-                append("x", x).
-                append("y", y).
+        return new ToStringBuilder(this, ToStringStyle.SIMPLE_STYLE).
                 append("value", value).toString();
 
     }

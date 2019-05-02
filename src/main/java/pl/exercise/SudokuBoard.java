@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.apache.commons.lang3.builder.ToStringStyle.SIMPLE_STYLE;
+
 
 public class SudokuBoard {
 
@@ -128,7 +130,7 @@ public class SudokuBoard {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this).
+        return new ToStringBuilder(this, SIMPLE_STYLE).
                 append("Pola Sudoku: ", board).toString();
     }
 

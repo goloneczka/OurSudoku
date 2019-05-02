@@ -1,5 +1,7 @@
 package pl.exercise;
 
+import java.io.IOException;
+
 public class App {
     public static void display(final SudokuBoard sudokuBoard) {
 
@@ -12,7 +14,7 @@ public class App {
         System.out.println();
     }
 
-    public static void main(final String[] args) {
+    public static void main(final String[] args) throws IOException{
 
 
         SudokuBoard sudokuBoard = new SudokuBoard();
@@ -24,8 +26,14 @@ public class App {
         display(sudokuBoard);
         sudokuSolver.solve(sudokuBoard);
         display(sudokuBoard);
-        sudokuBoard.clearBoard();
-        display(sudokuBoard);
+
+
+        Dao<SudokuBoard> dao = SudokuBoardDaoFactory.getFileDao("fileSudokuBoardDao.txt");
+        System.out.println(dao.read() );
+
+        Dao<SudokuBoard> dao1 = SudokuBoardDaoFactory.getFileDao("fileSudokuBoardDao1.txt");
+        dao1.write(sudokuBoard);
+
 
 
 
