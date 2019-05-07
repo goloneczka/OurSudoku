@@ -14,7 +14,7 @@ public class App {
         System.out.println();
     }
 
-    public static void main(final String[] args) throws IOException{
+    public static void main(final String[] args) throws IOException {
 
 
         SudokuBoard sudokuBoard = new SudokuBoard();
@@ -23,13 +23,13 @@ public class App {
         sudokuSolver.solve(sudokuBoard);
         System.out.println(sudokuBoard);
         sudokuBoard.clearBoard();
-        display(sudokuBoard);
+       // display(sudokuBoard);
         sudokuSolver.solve(sudokuBoard);
         display(sudokuBoard);
 
 
         Dao<SudokuBoard> dao = SudokuBoardDaoFactory.getFileDao("fileSudokuBoardDao.txt");
-        System.out.println(dao.read() );
+        System.out.println(dao.read());
 
         Dao<SudokuBoard> dao1 = SudokuBoardDaoFactory.getFileDao("fileSudokuBoardDao1.txt");
         dao1.write(sudokuBoard);

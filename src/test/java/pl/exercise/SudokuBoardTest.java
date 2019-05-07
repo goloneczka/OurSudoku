@@ -2,6 +2,9 @@ package pl.exercise;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import java.io.IOException;
+
 public class SudokuBoardTest {
 
     SudokuBoard sudokuBoard = new SudokuBoard();
@@ -138,6 +141,16 @@ public class SudokuBoardTest {
         boolean test = true;
         SudokuBoard sudokuBoard1 = new SudokuBoard(sudokuBoard);
 
+        assertTrue(!sudokuBoard1.equals(null)); //null
+        assertTrue(sudokuBoard1.equals(sudokuBoard1)); // this
+        SudokuBoard sudokuBoard2 = new SudokuBoard(sudokuBoard1);
+        sudokuBoard2.get(1,1).setFieldValue(0); // zeruje jedno pole
+        assertTrue(!sudokuBoard1.equals(sudokuBoard2)); // not equals
+        int b=6;
+        assertTrue(!sudokuBoard1.equals(b)); // getClass
+
+
+
         if( !sudokuBoard.equals(sudokuBoard1) ) {
             test = false;
         }
@@ -151,6 +164,7 @@ public class SudokuBoardTest {
         }
 
         assertTrue(test);
+
     }
 
     @Test
@@ -160,6 +174,7 @@ public class SudokuBoardTest {
         sudokuSolver.solve(sudokuBoard);
         boolean test = true;
         SudokuBoard sudokuBoard1 = new SudokuBoard(sudokuBoard);
+
 
         if( sudokuBoard.hashCode() != sudokuBoard1.hashCode() ) {
             test = false;
@@ -174,5 +189,41 @@ public class SudokuBoardTest {
         }
 
         assertTrue(test);
+
+
     }
+
+    @Test
+    public void FileSudokuBoardDaoTest() throws IOException {
+        SudokuBoard sudokuBoard = new SudokuBoard();
+        SudokuBoard sudokuBoard1 ;
+        sudokuBoard.set(2, 2, 2);
+        SudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
+        sudokuSolver.solve(sudokuBoard);
+        Dao<SudokuBoard> dao = SudokuBoardDaoFactory.getFileDao("fileSudokuBoardDao.txt");
+
+        dao.write(sudokuBoard);
+        sudokuBoard1=new SudokuBoard(dao.read());
+      //  System.out.println(sudokuBoard.toString());
+     //   System.out.println(dao.read());
+     //   System.out.println(sudokuBoard1.toString());
+
+
+        assertTrue(sudokuBoard.equals(sudokuBoard1));
+
+
+
+    }
+    @Test
+    public void SudokuFieldEquals() {
+        SudokuField sudokuField=new SudokuField(1,3,5,true);
+        SudokuField sudokuField2=new SudokuField(3,3,5,true);
+
+        assertTrue(!sudokuField.equals(null)); //null
+        assertTrue(sudokuField.equals(sudokuField)); // this
+        assertTrue(!sudokuField.equals(sudokuField2)); // not equals
+
+
+    }
+
 }
