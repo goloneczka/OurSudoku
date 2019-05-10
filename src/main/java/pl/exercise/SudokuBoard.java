@@ -21,16 +21,9 @@ public class SudokuBoard {
 
 
     public SudokuBoard() {
-
         //generuje liste
         // Arrays.asList(new [100]);
         board = FixedSizeList.decorate(Arrays.asList(new List[N]));
-
-        board[0][1] = rand.nextInt(9) + 1;
-        board[N / 3][N / 3 + 1] = rand.nextInt(9) + 1;
-        board[2 * N / 3][2 * N / 3 + 1] = rand.nextInt(9) + 1;
-    }
-
 
         for (int i = 0; i < N; i++) {
             board.set(i, Arrays.asList(new SudokuField[N]));
@@ -61,7 +54,6 @@ public class SudokuBoard {
             }
         }
     }
-
 
 
     // ChceckBoard ktore sprawdza cale  sudoku
@@ -98,10 +90,6 @@ public class SudokuBoard {
 
     // nie usuwa stalych sudokuField!
     public void clearBoard() {
-
-    private Point whereIsNull() {
-        Point point = new Point();
-
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (!board.get(i).get(j).isConstPoint()) {
@@ -123,7 +111,6 @@ public class SudokuBoard {
         return new SudokuRow(list);
     }
 
-
     public SudokuColumn getColumn(int x) {
         ArrayList<SudokuField> list = new ArrayList<SudokuField>(N);
         for (int i = 0; i < N; i++) {
@@ -137,20 +124,6 @@ public class SudokuBoard {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 list.add(i, get((x / 3) * 3 + i, (y / 3) * 3 + j));
-
-    public boolean fillBoard() {
-        if (whereIsNull() == null) {
-            return true;
-        }
-        for (int k = 1; k <= N; k++) {
-            Point point = whereIsNull();
-            if (add(point.row, point.column, k)) {
-                board[point.row][point.column] = k;
-                if (fillBoard()) {
-                    return true;
-                }
-                board[point.row][point.column] = 0;
-
             }
         }
         return new SudokuBox(list);
