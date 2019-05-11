@@ -1,4 +1,4 @@
-package pl.exercise;
+package pl.comp;
 
 public class SudokuBoardDaoFactory {
 

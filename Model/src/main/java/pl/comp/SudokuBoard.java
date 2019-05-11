@@ -1,4 +1,4 @@
-package pl.exercise;
+package pl.comp;
 
 
 import org.apache.commons.collections.list.FixedSizeList;

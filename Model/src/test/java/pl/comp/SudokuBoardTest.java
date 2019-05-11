@@ -1,4 +1,4 @@
-package pl.exercise;
+package pl.comp;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;

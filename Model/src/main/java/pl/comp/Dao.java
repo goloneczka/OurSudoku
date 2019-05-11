@@ -1,6 +1,5 @@
-package pl.exercise;
+package pl.comp;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public interface Dao<T> {
