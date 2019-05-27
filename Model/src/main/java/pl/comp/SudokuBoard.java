@@ -14,7 +14,7 @@ import java.util.List;
 import static org.apache.commons.lang3.builder.ToStringStyle.SIMPLE_STYLE;
 
 
-public class SudokuBoard {
+public class SudokuBoard implements Cloneable {
 
     private static final int N = 9;
     private List<List<SudokuField>> board;
@@ -34,6 +34,12 @@ public class SudokuBoard {
                 board.get(i).set(j, new SudokuField(i, j, 0));
             }
         }
+    }
+
+    @Override
+    public SudokuBoard clone() throws CloneNotSupportedException {
+      // pierdole
+        return null;
     }
 
     // Konstruktor se kopiujacy

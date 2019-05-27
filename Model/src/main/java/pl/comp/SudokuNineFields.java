@@ -4,11 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class SudokuNineFields {
+public class SudokuNineFields implements Cloneable{
     private final List<SudokuField> list;
 
     SudokuNineFields(final ArrayList<SudokuField> list) {
         this.list = list;
+    }
+
+    @Override
+    public SudokuNineFields clone() throws CloneNotSupportedException {
+        return (SudokuNineFields) super.clone();
     }
 
     boolean verify() {
@@ -19,6 +24,8 @@ public class SudokuNineFields {
                     return false;
                 }
             }
+
+
         }
         return true;
     }

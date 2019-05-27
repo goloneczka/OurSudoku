@@ -5,7 +5,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class SudokuField {
+public class SudokuField implements Comparable<SudokuField>, Cloneable {
 
     private int x = 0;
     private int y = 0;
@@ -17,6 +17,18 @@ public class SudokuField {
         this.y = y;
         this.value = value;
         this.constPoint = constPoint;
+    }
+
+    @Override
+    public SudokuField clone() throws CloneNotSupportedException {
+        return (SudokuField) super.clone();
+    }
+
+    public SudokuField(final SudokuField sudokuField){
+        this.x = sudokuField.getX();
+        this.y = sudokuField.getY();
+        this.value = sudokuField.getFieldValue();
+        this.constPoint = sudokuField.isConstPoint();
     }
 
     SudokuField(int x, int y, int value) {
@@ -80,5 +92,11 @@ public class SudokuField {
         return new HashCodeBuilder(17, 31).
                 append(x).append(y).append(value).append(constPoint).
                 toHashCode();
+    }
+
+    @Override
+    public int compareTo(SudokuField o) {
+        //return Integer.compare(getX(), o.getX());
+        return 0;
     }
 }
