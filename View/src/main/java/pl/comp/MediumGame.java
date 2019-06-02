@@ -1,4 +1,4 @@
-package sample;
+package pl.comp;
 
 import pl.comp.SudokuBoard;
 

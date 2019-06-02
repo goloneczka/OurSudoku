@@ -1,4 +1,4 @@
-package sample;
+package pl.comp;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -12,11 +12,14 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.control.TextField;
 import pl.comp.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -31,8 +34,9 @@ public class LevelGame {
     private SudokuBoard sudokuBoardClone;
     private Random rand = new Random();
     private Button button;
+    private Button button2;
     private List<Tile> tiles;
-
+    Stage primaryStage = new Stage();
     LevelGame(SudokuBoard sudokuBoard) {
         this.sudokuBoard = sudokuBoard;
     }
@@ -63,8 +67,62 @@ public class LevelGame {
             root.getChildren().add(tile);
         }
         button = new Button("Check!");
-        button.setAlignment(Pos.BOTTOM_CENTER); // czemu nie dziala XD ?
+        button.layoutXProperty().setValue(150);
+        button.layoutYProperty().setValue(460);
+
+        button2 = new Button("SaveToFile!");
+        button2.layoutXProperty().setValue(250);
+        button2.layoutYProperty().setValue(460);
+
+        button.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                //   final boolean[] flag1 = {true};
+                boolean flag1 = true;
+                for(int i=0;i<9;i++){
+                    for (int j=0;j<9;j++){
+                        if(!String.valueOf(sudokuBoardClone.get(i,j).getFieldValue()).equals(tiles.get(i*9+j).text.getText()) )
+                        {
+                            System.out.println(tiles.get(i*9+j).text.getText());
+                            flag1 = false;
+                        }
+                    }
+                }
+                if(flag1)
+                    System.out.println("YOU ARE WINNER");
+                else
+                    System.out.println("You can do this better");
+            }
+        });
+
+        button2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                FileChooser fileChooser = new FileChooser();
+                fileChooser.setTitle("Save file");
+                //Set extension filte
+           //     FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("TXT files (*.txt)", "*.txt");
+            //    fileChooser.getExtensionFilters().add(extFilter);
+
+                //Show save file dialog
+                File file = fileChooser.showSaveDialog(primaryStage);
+
+                if(file != null){
+                  //  SaveFile(Santa_Claus_Is_Coming_To_Town, file);
+                    Dao<SudokuBoard> dao = SudokuBoardDaoFactory.getFileDao(file.getName());
+
+                    try {
+                        dao.write(sudokuBoard);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+
+            }
+        });
         root.getChildren().add(button);
+        root.getChildren().add(button2);
         return root;
     }
 
@@ -75,9 +133,7 @@ public class LevelGame {
         sudokuBoard.set(2, 8, 7);
         sudokuSolver.solve(sudokuBoard);
         //  try {
-        sudokuBoardClone = new SudokuBoard(sudokuBoard); // tu powinien byc jebany klon, ale klon jest chujowy
-//        } catch (CloneNotSupportedException e) {
-//            e.printStackTrace();
+
 //        }
         for (int i = 0; i < nullPoints; i++) {
             do {
@@ -92,40 +148,23 @@ public class LevelGame {
         }
     }
 
-    public void display() {
-
+    public void display(boolean czyWczytujemyZPliku) {
+        if(!czyWczytujemyZPliku)
         level();
-        Stage primaryStage = new Stage();
+
+        sudokuBoardClone = new SudokuBoard(sudokuBoard);
+
         primaryStage.setTitle(level);
         primaryStage.setScene(new Scene(createContent()));
         primaryStage.show();
-        check();
+
 
     }
-
-    public void check(){
-
-
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                final boolean[] flag1 = {true};
-                for(int i=0;i<9;i++){
-                    for (int j=0;j<9;j++){
-                        if(!String.valueOf(sudokuBoardClone.get(i,j).getFieldValue()).equals(tiles.get(i*9+j).text.getText()) )
-                        {
-                            System.out.println(tiles.get(i*9+j).text.getText());
-                            flag1[0] = false;
-                        }
-                    }
-                }
-                if(flag1[0])
-                    System.out.println("YOU ARE WINNER");
-                else
-                    System.out.println("You can do this better");
-            }
-        });
+    public void schowaj(){
+        primaryStage.close();
     }
+
+
 
     private class Tile extends StackPane {
 
@@ -162,5 +201,6 @@ public class LevelGame {
             });
         }
     }
+
 
 }

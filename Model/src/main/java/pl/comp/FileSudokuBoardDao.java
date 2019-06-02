@@ -2,7 +2,7 @@ package pl.comp;
 
 import java.io.*;
 
-public class FileSudokuBoardDao implements Dao  {
+public class FileSudokuBoardDao implements Dao<SudokuBoard>  {
 
     private String fileName;
 
@@ -11,7 +11,7 @@ public class FileSudokuBoardDao implements Dao  {
     }
 
     @Override
-    public Object read() throws IOException {
+    public SudokuBoard read() throws IOException {
 
         int b = 0, l=0;
         int[] tab = new int[81];
@@ -40,8 +40,10 @@ public class FileSudokuBoardDao implements Dao  {
         return sudokuBoard;
     }
 
+
+
     @Override
-    public void write(final Object obj) throws FileNotFoundException {
+    public void write(final SudokuBoard obj) throws FileNotFoundException {
 
         try (PrintWriter write = new PrintWriter(fileName)) {
             write.print(obj);

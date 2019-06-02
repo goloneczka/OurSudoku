@@ -37,10 +37,27 @@ public class SudokuBoard implements Cloneable {
     }
 
     @Override
-    public SudokuBoard clone() throws CloneNotSupportedException {
-      // pierdole
-        return null;
+    protected Object clone() throws CloneNotSupportedException {
+        SudokuBoard sudokuBoard = null ;
+        try {
+            sudokuBoard = (SudokuBoard) super.clone();
+            sudokuBoard.board=FixedSizeList.decorate(Arrays.asList(new List[N]));
+            for (int i = 0; i < N; i++) {
+                sudokuBoard.board.set(i, Arrays.asList(new SudokuField[N]));
+            }
+            // dodaje puste pola
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < N; j++) {
+                    sudokuBoard.board.get(i).set(j, this.board.get(i).get(j).clone());
+                }
+            }
+        } catch (CloneNotSupportedException e){
+            throw new AssertionError();
+        }
+        return sudokuBoard;
     }
+
+
 
     // Konstruktor se kopiujacy
     public SudokuBoard(final SudokuBoard sudokuBoard) {

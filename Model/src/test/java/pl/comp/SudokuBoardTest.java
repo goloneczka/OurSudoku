@@ -1,4 +1,5 @@
 package pl.comp;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -222,6 +223,17 @@ public class SudokuBoardTest {
         assertTrue(!sudokuField.equals(null)); //null
         assertTrue(sudokuField.equals(sudokuField)); // this
         assertTrue(!sudokuField.equals(sudokuField2)); // not equals
+
+
+    }
+    @Test
+    public void SudokuBoardClone() throws CloneNotSupportedException {
+            SudokuBoard sudokuBoardPom=new SudokuBoard();
+        SudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
+        sudokuSolver.solve(sudokuBoardPom);
+            SudokuBoard sudokuBoardClone= (SudokuBoard) sudokuBoardPom.clone();
+            sudokuBoardClone.clearBoard();
+            assertTrue(!sudokuBoardClone.equals(sudokuBoardPom));
 
 
     }
