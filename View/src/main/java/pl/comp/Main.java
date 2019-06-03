@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 
 public class Main extends Application implements EventHandler<ActionEvent> {
 
-    Stage window;
+    static Stage window;
 
 
 
@@ -50,9 +50,13 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 
 
        // Parent root = FXMLLoader.load(getClass().getResource("menuOne.fxml"));
-        Scene scene = new Scene(root, 400, 350);
+        Scene scene = new Scene(root, 400, 400);
         primaryStage.setScene(scene);
         primaryStage.show();
+
+       // Controller controller = new Controller();
+
+
         // wywoluje sie po wcisieciu x w menu
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {

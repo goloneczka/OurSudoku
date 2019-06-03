@@ -1,6 +1,7 @@
 package pl.comp;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.MenuItem;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -8,14 +9,22 @@ import javafx.stage.Window;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.Locale;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 
 public class Controller  {
 
 
- //   @FXML
-  //  private Button ButtonlevelOne =  ;
+   @FXML
+   public MenuItem menuPolski;
+    @FXML
+    public MenuItem menuAngielski;
+    @FXML
+    void initialize() {
+
+    }
+
 
     public void levelOne(ActionEvent actionEvent) {
         if(Main.levelGame!=null)
@@ -56,5 +65,13 @@ public class Controller  {
         }
         Main.levelGame = new LevelGame(sudokuBoard);
         Main.levelGame.display(true);
+    }
+
+    public void bundlePL(ActionEvent actionEvent) {
+      //
+    }
+
+    public void bundleEN(ActionEvent actionEvent) {
+      //
     }
 }

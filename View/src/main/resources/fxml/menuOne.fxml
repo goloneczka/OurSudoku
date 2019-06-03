@@ -21,7 +21,12 @@
               </Menu>
               <Menu mnemonicParsing="false" text="Edit">
                   <items>
-                      <MenuItem mnemonicParsing="false" text="Change Language" />
+                      <Menu mnemonicParsing="false" text="Jezyk">
+                          <items>
+                              <MenuItem id="menuPolski" mnemonicParsing="false" onAction="#bundleEN" text="Polski" />
+                              <MenuItem id="menuAngielski" mnemonicParsing="false" onAction="#bundlePL" text="Angielski" />
+                          </items>
+                      </Menu>
                   </items>
               </Menu>
               <Menu mnemonicParsing="false" text="Help">
