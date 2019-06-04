@@ -23,8 +23,8 @@
                   <items>
                       <Menu mnemonicParsing="false" text="Jezyk">
                           <items>
-                              <MenuItem id="menuPolski" mnemonicParsing="false" onAction="#bundleEN" text="Polski" />
-                              <MenuItem id="menuAngielski" mnemonicParsing="false" onAction="#bundlePL" text="Angielski" />
+                              <MenuItem id="menuPolski" mnemonicParsing="false" onAction="#bundlePL" text="Polski" />
+                              <MenuItem id="menuAngielski" mnemonicParsing="false" onAction="#bundleEN" text="Angielski" />
                           </items>
                       </Menu>
                   </items>
@@ -36,10 +36,10 @@
               </Menu>
           </menus>
       </MenuBar>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="20" prefWidth="30">
+    <AnchorPane id="scena" minHeight="0.0" minWidth="0.0" prefHeight="20" prefWidth="30">
          <children>
 
-            <Text layoutX="160.0" layoutY="30.0" text="Greeting!">
+            <Text layoutX="160.0" layoutY="30.0" text="%Greeting">
                <font>
                   <Font name="Arial" size="25.0" />
                </font>
@@ -47,6 +47,7 @@
            <Button layoutX="161.0" layoutY="104.0" mnemonicParsing="false" onAction="#levelOne" text="%easyLevel" textAlignment="CENTER" />
             <Button layoutX="161.0" layoutY="187.0" mnemonicParsing="false" onAction="#levelTwo" text="%mediumLevel" />
             <Button layoutX="155.0" layoutY="272.0" mnemonicParsing="false" onAction="#levelThree" text="%hardLevel" />
-         </children></AnchorPane>
+         </children>
+    </AnchorPane>
   </items>
 </SplitPane>

@@ -1,7 +1,11 @@
 package pl.comp;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -9,14 +13,16 @@ import javafx.stage.Window;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 
 public class Controller  {
 
-
-   @FXML
+    @FXML
+    private AnchorPane scena;
+    @FXML
    public MenuItem menuPolski;
     @FXML
     public MenuItem menuAngielski;
@@ -25,6 +31,15 @@ public class Controller  {
 
     }
 
+    private Scene scene;
+
+    public void scene( ResourceBundle bundle)  throws Exception{
+        URL url = new File("View/src/main/resources/fxml/menuOne.fxml").toURL();
+        Parent root = FXMLLoader.load(url,bundle);
+        Scene scene = new Scene(root, 400, 400);
+        Main.window.setScene(scene);
+        Main.window.show();
+    }
 
     public void levelOne(ActionEvent actionEvent) {
         if(Main.levelGame!=null)
@@ -67,11 +82,17 @@ public class Controller  {
         Main.levelGame.display(true);
     }
 
-    public void bundlePL(ActionEvent actionEvent) {
-      //
+    public void bundlePL(ActionEvent actionEvent) throws Exception {
+
+        Locale locale = new Locale("pl", "PL");
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.bundle_pl", locale);
+        scene(bundle);
     }
 
-    public void bundleEN(ActionEvent actionEvent) {
-      //
+    public void bundleEN(ActionEvent actionEvent)  throws Exception{
+
+        ResourceBundle bundle = ResourceBundle.getBundle("bundles.bundle_en");
+        scene(bundle);
+
     }
 }

@@ -22,12 +22,8 @@ import java.util.ResourceBundle;
 public class Main extends Application implements EventHandler<ActionEvent> {
 
     static Stage window;
-
-
-
-
-
-    static LevelGame levelGame;
+    static pl.comp.LevelGame levelGame;
+    pl.comp.Controller controller = new pl.comp.Controller();
 
     @Override
     public void handle(ActionEvent event) {
@@ -37,19 +33,13 @@ public class Main extends Application implements EventHandler<ActionEvent> {
     @Override
     public void start(Stage primaryStage) throws Exception{
        // final Locale locale = new Locale("pl", "PL");
-       // Locale.setDefault(locale);
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("bundles.bundle");
-        System.out.println(resourceBundle.getObject("easyLevel"));
-
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("bundles.bundle_en");
 
         window = primaryStage;
-
-        URL url = new File("/home/przemzan/Desktop/Programowanie Komponentowe/OurSudoku/View/src/main/resources/fxml/menuOne.fxml").toURL();
+        URL url = new File("View/src/main/resources/fxml/menuOne.fxml").toURL();
         Parent root = FXMLLoader.load(url,resourceBundle);
 
 
-
-       // Parent root = FXMLLoader.load(getClass().getResource("menuOne.fxml"));
         Scene scene = new Scene(root, 400, 400);
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -66,12 +56,10 @@ public class Main extends Application implements EventHandler<ActionEvent> {
             }
         });
 
-
     }
 
     public static void main(String[] args) {
         Application.launch(Main.class, args);
     }
-
 
 }
