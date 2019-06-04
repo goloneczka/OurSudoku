@@ -24,7 +24,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
     static Stage window;
     static pl.comp.LevelGame levelGame;
     pl.comp.Controller controller = new pl.comp.Controller();
-
+    public static ResourceBundle resourceBundle;
     @Override
     public void handle(ActionEvent event) {
 
@@ -34,7 +34,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
     public void start(Stage primaryStage) throws Exception{
        // final Locale locale = new Locale("pl", "PL");
         ResourceBundle resourceBundle = ResourceBundle.getBundle("bundles.bundle_en");
-
+        this.resourceBundle=resourceBundle;
         window = primaryStage;
         URL url = new File("View/src/main/resources/fxml/menuOne.fxml").toURL();
         Parent root = FXMLLoader.load(url,resourceBundle);

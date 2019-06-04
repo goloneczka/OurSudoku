@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.comp.Controller">
+<SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.comp.Controller" fx:id="splitPane">
   <items>
       <MenuBar prefHeight="29.0" prefWidth="598.0">
           <menus>
@@ -31,7 +31,7 @@
               </Menu>
               <Menu mnemonicParsing="false" text="Help">
                   <items>
-                      <MenuItem mnemonicParsing="false" text="Autors" />
+                      <MenuItem mnemonicParsing="false" text="Autors" onAction="#autors"  />
                   </items>
               </Menu>
           </menus>

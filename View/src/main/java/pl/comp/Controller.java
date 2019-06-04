@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.SplitPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -21,7 +22,7 @@ import javafx.fxml.FXML;
 public class Controller  {
 
     @FXML
-    private AnchorPane scena;
+    private SplitPane splitPane;
     @FXML
    public MenuItem menuPolski;
     @FXML
@@ -86,13 +87,25 @@ public class Controller  {
 
         Locale locale = new Locale("pl", "PL");
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.bundle_pl", locale);
+        Main.resourceBundle=bundle;
         scene(bundle);
     }
 
     public void bundleEN(ActionEvent actionEvent)  throws Exception{
 
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.bundle_en");
+        Main.resourceBundle=bundle;
         scene(bundle);
 
+    }
+
+    public void autors(ActionEvent actionEvent) throws IOException {
+        URL url = new File("View/src/main/resources/fxml/autors.fxml").toURL();
+      //  Locale locale = new Locale("pl", "PL");
+      //  ResourceBundle bundle = ResourceBundle.getBundle("bundles.bundle_pl", locale);
+        Parent root = FXMLLoader.load(url,Main.resourceBundle);
+        Scene scene = new Scene(root, 400, 400);
+        Main.window.setScene(scene);
+        Main.window.show();
     }
 }
