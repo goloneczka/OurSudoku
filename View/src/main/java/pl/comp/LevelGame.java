@@ -106,7 +106,14 @@ public class LevelGame {
 
                 //Show save file dialog
                 File file = fileChooser.showSaveDialog(primaryStage);
-
+                for (int i = 0; i < 9; i++) {
+                    for (int j = 0; j < 9; j++) {
+                        if(tiles.get((i*9)+j).text.getText() != null)
+                    //        sudokuBoard.get(i,j).setFieldValue(0);
+                    //    else
+                        sudokuBoard.get(i,j).setFieldValue(Integer.valueOf(tiles.get((i*9)+j).text.getText()));
+                    }
+                }
                 if(file != null){
                   //  SaveFile(Santa_Claus_Is_Coming_To_Town, file);
                     Dao<SudokuBoard> dao = SudokuBoardDaoFactory.getFileDao(file.getName());
