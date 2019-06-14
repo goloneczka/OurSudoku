@@ -1,8 +1,11 @@
 package pl.comp;
 
 import java.io.*;
+import java.util.logging.Logger;
 
 public class FileSudokuBoardDao implements Dao<SudokuBoard>  {
+
+
 
     private String fileName;
 

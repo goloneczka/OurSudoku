@@ -84,7 +84,7 @@ public class Controller  {
     }
 
     public void bundlePL(ActionEvent actionEvent) throws Exception {
-
+        Main.LOGGER.info("Zmiana jezyka na Polski");
         Locale locale = new Locale("pl", "PL");
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.bundle_pl", locale);
         Main.resourceBundle=bundle;
@@ -92,7 +92,7 @@ public class Controller  {
     }
 
     public void bundleEN(ActionEvent actionEvent)  throws Exception{
-
+        Main.LOGGER.info("Zmiana jezyka na Angielski");
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.bundle_en");
         Main.resourceBundle=bundle;
         scene(bundle);
@@ -100,6 +100,7 @@ public class Controller  {
     }
 
     public void autors(ActionEvent actionEvent) throws IOException {
+        Main.LOGGER.info("Scena z autorami");
         URL url = new File("View/src/main/resources/fxml/autors.fxml").toURL();
       //  Locale locale = new Locale("pl", "PL");
       //  ResourceBundle bundle = ResourceBundle.getBundle("bundles.bundle_pl", locale);

@@ -83,15 +83,19 @@ public class LevelGame {
                     for (int j=0;j<9;j++){
                         if(!String.valueOf(sudokuBoardClone.get(i,j).getFieldValue()).equals(tiles.get(i*9+j).text.getText()) )
                         {
-                            System.out.println(tiles.get(i*9+j).text.getText());
+
                             flag1 = false;
                         }
                     }
                 }
-                if(flag1)
-                    System.out.println("YOU ARE WINNER");
+                if(flag1){
+
+                    Main.LOGGER.info("Wygrales");
+                }
+
                 else
-                    System.out.println("You can do this better");
+                Main.LOGGER.info("Sudoku zle rozwiazane, probuj dalej");
+
             }
         });
 
@@ -120,8 +124,11 @@ public class LevelGame {
 
                     try {
                         dao.write(sudokuBoard);
+
+                        Main.LOGGER.info("Udalo sie zapisac gra");
                     } catch (IOException e) {
                         e.printStackTrace();
+
                     }
                 }
 
@@ -158,6 +165,9 @@ public class LevelGame {
     public void display(boolean czyWczytujemyZPliku) {
         if(!czyWczytujemyZPliku)
         level();
+        else
+            Main.LOGGER.info("Wczytano gre z pliku");
+
 
         sudokuBoardClone = new SudokuBoard(sudokuBoard);
 
@@ -168,6 +178,7 @@ public class LevelGame {
 
     }
     public void schowaj(){
+        Main.LOGGER.info("Zamknieto gre");
         primaryStage.close();
     }
 

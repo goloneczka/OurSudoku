@@ -18,7 +18,7 @@ public class App {
 
 
         SudokuBoard sudokuBoard = new SudokuBoard();
-        sudokuBoard.set(2, 2, 2);
+      /*  sudokuBoard.set(2, 2, 2);
         SudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
         sudokuSolver.solve(sudokuBoard);
         System.out.println(sudokuBoard);
@@ -32,7 +32,7 @@ public class App {
         System.out.println(dao.read());
 
         Dao<SudokuBoard> dao1 = SudokuBoardDaoFactory.getFileDao("fileSudokuBoardDao1.txt");
-        dao1.write(sudokuBoard);
+        dao1.write(sudokuBoard);*/
 
 
 

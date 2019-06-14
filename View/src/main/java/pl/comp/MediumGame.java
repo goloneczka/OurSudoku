@@ -6,6 +6,8 @@ public class MediumGame extends LevelGame  {
 
     MediumGame(SudokuBoard sudokuBoard) {
         super(sudokuBoard);
+        Main.LOGGER.info("Uruchomiono latwa gre");
+
         setNullPoints(25);
         setLevel("Medium");
     }

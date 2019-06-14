@@ -14,9 +14,11 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.logging.*;
 
 
 public class Main extends Application implements EventHandler<ActionEvent> {
@@ -25,6 +27,21 @@ public class Main extends Application implements EventHandler<ActionEvent> {
     static pl.comp.LevelGame levelGame;
     pl.comp.Controller controller = new pl.comp.Controller();
     public static ResourceBundle resourceBundle;
+
+    public static Logger LOGGER;
+  //  static Handler fileHandler  = null;
+
+    static {
+        System.setProperty("java.util.logging.config.file",
+                "/home/przemzan/Desktop/Programowanie Komponentowe/OurSudoku/View/src/main/resources/logging/logging.properties");
+
+        //must initialize loggers after setting above property
+        LOGGER = Logger.getLogger(Main.class.getName());
+    }
+
+   /* private static final Logger logger =
+            Logger.getLogger(FileSudokuBoardDao.class.getName());*/
+
     @Override
     public void handle(ActionEvent event) {
 
@@ -52,14 +69,43 @@ public class Main extends Application implements EventHandler<ActionEvent> {
             public void handle(WindowEvent we) {
                 if(Main.levelGame!=null)
                 Main.levelGame.schowaj();
-                System.out.println("Stage is closing");
+                LOGGER.info("Aplikajcja jest zamykana");
+
+
             }
         });
 
     }
 
     public static void main(String[] args) {
+
+
+
+
+     /*   try {
+            fileHandler  = new FileHandler("./sudokuView.log");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+
+   //     LOGGER.addHandler(fileHandler);
+
+
+
+        LOGGER.info("Uruchomiono Aplikacje");
+
+
+
+
+
+
+
+
         Application.launch(Main.class, args);
+
+
+
+
     }
 
 }
