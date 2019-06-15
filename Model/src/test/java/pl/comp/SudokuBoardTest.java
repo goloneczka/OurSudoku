@@ -197,15 +197,23 @@ public class SudokuBoardTest {
     @Test
     public void FileSudokuBoardDaoTest() throws IOException {
         SudokuBoard sudokuBoard = new SudokuBoard();
-        SudokuBoard sudokuBoard1 ;
+        SudokuBoard sudokuBoard1 = null;
         sudokuBoard.set(2, 2, 2);
         SudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
         sudokuSolver.solve(sudokuBoard);
         Dao<SudokuBoard> dao = SudokuBoardDaoFactory.getFileDao("fileSudokuBoardDao.txt");
 
-        dao.write(sudokuBoard);
-        sudokuBoard1=new SudokuBoard(dao.read());
-      //  System.out.println(sudokuBoard.toString());
+        try {
+            dao.write(sudokuBoard);
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+        try {
+            sudokuBoard1=new SudokuBoard(dao.read());
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+        //  System.out.println(sudokuBoard.toString());
      //   System.out.println(dao.read());
      //   System.out.println(sudokuBoard1.toString());
 

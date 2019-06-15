@@ -27,7 +27,7 @@ public class ControllerAutors  {
     }
 
     public void back(ActionEvent actionEvent) throws IOException {
-        Main.LOGGER.info("Powrot do glownego menu");
+        SudokuBoard.LOGGER.info("Powrot do glownego menu");
         URL url = new File("View/src/main/resources/fxml/menuOne.fxml").toURL();
        // Locale locale = new Locale("pl", "PL");
         //ResourceBundle bundle = ResourceBundle.getBundle("bundles.bundle_pl", locale);

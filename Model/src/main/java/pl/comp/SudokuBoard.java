@@ -19,6 +19,18 @@ import static org.apache.commons.lang3.builder.ToStringStyle.SIMPLE_STYLE;
 public class SudokuBoard implements Cloneable {
 
 
+    public static Logger LOGGER;
+    //  static Handler fileHandler  = null;
+
+    static {
+        System.setProperty("java.util.logging.config.file",
+                "/home/przemzan/Desktop/Programowanie Komponentowe/OurSudoku/View/src/main/resources/logging/logging.properties");
+
+        //must initialize loggers after setting above property
+        LOGGER = Logger.getLogger(SudokuBoard.class.getName());
+    }
+
+
     private static final int N = 9;
     private List<List<SudokuField>> board;
 

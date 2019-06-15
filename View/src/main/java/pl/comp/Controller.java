@@ -13,6 +13,7 @@ import javafx.stage.Window;
 
 import java.awt.*;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
@@ -76,15 +77,23 @@ public class Controller  {
 
         try {
             sudokuBoard=dao.read();
-        } catch (IOException e) {
-            e.printStackTrace();
+            SudokuBoard.LOGGER.info("Udalo sie wczytac gra");
+       //     throw new FileExeption("Nie mozna wczytac").initCause(new FileNotFoundException("Nie mozna odnalez pliku"));
+
+        } catch (FileExeption fileExeption) {
+            SudokuBoard.LOGGER.warning(fileExeption.toString());
+            SudokuBoard.LOGGER.warning(fileExeption.getCause().toString());
+
+
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
         }
         Main.levelGame = new LevelGame(sudokuBoard);
         Main.levelGame.display(true);
     }
 
     public void bundlePL(ActionEvent actionEvent) throws Exception {
-        Main.LOGGER.info("Zmiana jezyka na Polski");
+        SudokuBoard.LOGGER.info("Zmiana jezyka na Polski");
         Locale locale = new Locale("pl", "PL");
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.bundle_pl", locale);
         Main.resourceBundle=bundle;
@@ -92,7 +101,7 @@ public class Controller  {
     }
 
     public void bundleEN(ActionEvent actionEvent)  throws Exception{
-        Main.LOGGER.info("Zmiana jezyka na Angielski");
+        SudokuBoard.LOGGER.info("Zmiana jezyka na Angielski");
         ResourceBundle bundle = ResourceBundle.getBundle("bundles.bundle_en");
         Main.resourceBundle=bundle;
         scene(bundle);
@@ -100,7 +109,7 @@ public class Controller  {
     }
 
     public void autors(ActionEvent actionEvent) throws IOException {
-        Main.LOGGER.info("Scena z autorami");
+        SudokuBoard.LOGGER.info("Scena z autorami");
         URL url = new File("View/src/main/resources/fxml/autors.fxml").toURL();
       //  Locale locale = new Locale("pl", "PL");
       //  ResourceBundle bundle = ResourceBundle.getBundle("bundles.bundle_pl", locale);

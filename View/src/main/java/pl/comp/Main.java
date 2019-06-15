@@ -28,7 +28,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
     pl.comp.Controller controller = new pl.comp.Controller();
     public static ResourceBundle resourceBundle;
 
-    public static Logger LOGGER;
+    /*public static Logger LOGGER;
   //  static Handler fileHandler  = null;
 
     static {
@@ -37,7 +37,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 
         //must initialize loggers after setting above property
         LOGGER = Logger.getLogger(Main.class.getName());
-    }
+    }*/
 
    /* private static final Logger logger =
             Logger.getLogger(FileSudokuBoardDao.class.getName());*/
@@ -69,7 +69,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
             public void handle(WindowEvent we) {
                 if(Main.levelGame!=null)
                 Main.levelGame.schowaj();
-                LOGGER.info("Aplikajcja jest zamykana");
+                SudokuBoard.LOGGER.info("Aplikajcja jest zamykana");
 
 
             }
@@ -92,7 +92,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 
 
 
-        LOGGER.info("Uruchomiono Aplikacje");
+        SudokuBoard.LOGGER.info("Uruchomiono Aplikacje");
 
 
 

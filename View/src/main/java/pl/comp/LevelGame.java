@@ -90,11 +90,11 @@ public class LevelGame {
                 }
                 if(flag1){
 
-                    Main.LOGGER.info("Wygrales");
+                    SudokuBoard.LOGGER.info("Wygrales");
                 }
 
                 else
-                Main.LOGGER.info("Sudoku zle rozwiazane, probuj dalej");
+                    SudokuBoard.LOGGER.info("Sudoku zle rozwiazane, probuj dalej");
 
             }
         });
@@ -123,11 +123,15 @@ public class LevelGame {
                     Dao<SudokuBoard> dao = SudokuBoardDaoFactory.getFileDao(file.getName());
 
                     try {
-                        dao.write(sudokuBoard);
 
-                        Main.LOGGER.info("Udalo sie zapisac gra");
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                            dao.write(sudokuBoard);
+
+                        SudokuBoard.LOGGER.info("Udalo sie zapisac gra");
+
+                    } catch (Throwable throwable) {
+                        SudokuBoard.LOGGER.warning(throwable.toString());
+                        SudokuBoard.LOGGER.warning(throwable.getCause().toString());
+
 
                     }
                 }
@@ -166,7 +170,7 @@ public class LevelGame {
         if(!czyWczytujemyZPliku)
         level();
         else
-            Main.LOGGER.info("Wczytano gre z pliku");
+            SudokuBoard.LOGGER.info("Wczytano gre z pliku");
 
 
         sudokuBoardClone = new SudokuBoard(sudokuBoard);
@@ -178,7 +182,7 @@ public class LevelGame {
 
     }
     public void schowaj(){
-        Main.LOGGER.info("Zamknieto gre");
+        SudokuBoard.LOGGER.info("Zamknieto gre");
         primaryStage.close();
     }
 

@@ -3,6 +3,7 @@ package pl.comp;
 import java.io.*;
 import java.util.logging.Logger;
 
+
 public class FileSudokuBoardDao implements Dao<SudokuBoard>  {
 
 
@@ -14,7 +15,7 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard>  {
     }
 
     @Override
-    public SudokuBoard read() throws IOException {
+    public SudokuBoard read() throws Throwable {
 
         int b = 0, l=0;
         int[] tab = new int[81];
@@ -27,9 +28,12 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard>  {
                     l++;
                 }
             }
+
+           // throw new FileNotFoundException();
         }
-        catch (IOException e) {
-            throw new RuntimeException(e);
+        catch (FileNotFoundException e) {
+            throw new FileExeption("Nie mozna wczytac").initCause(new FileNotFoundException("Nie mozna odnalez pliku"));
+
         }
 
         SudokuBoard sudokuBoard = new SudokuBoard();
@@ -46,14 +50,22 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard>  {
 
 
     @Override
-    public void write(final SudokuBoard obj) throws FileNotFoundException {
+    public void write(final SudokuBoard obj) throws Throwable {
 
         try (PrintWriter write = new PrintWriter(fileName)) {
             write.print(obj);
         }
         catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            throw new FileExeption("Nie mozna zapisac").initCause(new FileNotFoundException("Nie mozna odnalez pliku"));
+
         }
+      /*  try {
+            throw new ArithmeticException("Top Level Exception.")
+                    .initCause(new IOException("IO cause."));
+        } catch(ArithmeticException ae) {
+            System.out.println("Caught : " + ae);
+            System.out.println("Actual cause: "+ ae.getCause());
+        }*/
     }
 
     @Override

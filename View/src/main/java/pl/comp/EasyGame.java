@@ -9,7 +9,7 @@ public class EasyGame extends LevelGame  {
 
 
         super(sudokuBoard);
-        Main.LOGGER.info("Uruchomiono latwa gre");
+        SudokuBoard.LOGGER.info("Uruchomiono latwa gre");
 
         setNullPoints(10);
         setLevel("Easy");

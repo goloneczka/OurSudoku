@@ -7,7 +7,7 @@ public class HardGame extends LevelGame  {
 
     HardGame(SudokuBoard sudokuBoard) {
         super(sudokuBoard);
-        Main.LOGGER.info("Uruchomiono latwa gre");
+        SudokuBoard.LOGGER.info("Uruchomiono latwa gre");
 
         setNullPoints(40);
         setLevel("Hard");
