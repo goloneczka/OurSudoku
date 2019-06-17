@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6536eea5-80e3-4a90-84a0-14898658472a" name="Default Changelist" comment="Logi">
-      <change afterPath="$PROJECT_DIR$/Model/src/main/java/pl/comp/FileExeption.java" afterDir="false" />
+    <list default="true" id="6536eea5-80e3-4a90-84a0-14898658472a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Model/src/main/java/pl/comp/JdbcSudokuBoardDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/comp/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/comp/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/comp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/comp/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/comp/FileSudokuBoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/comp/FileSudokuBoardDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/src/test/java/pl/comp/SudokuBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/test/java/pl/comp/SudokuBoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/comp/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/comp/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/comp/ControllerAutors.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/comp/ControllerAutors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/comp/EasyGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/comp/EasyGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/comp/HardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/comp/HardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/comp/LevelGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/comp/LevelGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/comp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/comp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/src/main/java/pl/comp/MediumGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/View/src/main/java/pl/comp/MediumGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fileSudokuBoardDao.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fileSudokuBoardDao.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuField.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuField.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
     <ignored path="$PROJECT_DIR$/Model/target/" />
     <ignored path="$PROJECT_DIR$/View/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +36,29 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Sudoku" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Sudoku" type="feb32156:DbDataSourceImpl" />
+        <item name="APP: schema" type="12aa88c4:DerbyImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Sudoku" type="feb32156:DbDataSourceImpl" />
+        <item name="APP: schema" type="12aa88c4:DerbyImplModel$Schema" />
+        <item name="SUDOKUBOARDO: table" type="7a557cd6:DerbyImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Sudoku" type="feb32156:DbDataSourceImpl" />
+        <item name="APP: schema" type="12aa88c4:DerbyImplModel$Schema" />
+        <item name="SUDOKUBOARDS: table" type="7a557cd6:DerbyImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="ErrorTreeViewConfiguration">
@@ -53,101 +67,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/Main.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/JdbcSudokuBoardDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="94" column="20" selection-start-line="94" selection-start-column="20" selection-end-line="94" selection-end-column="20" />
+            <state relative-caret-position="70">
+              <caret line="75" column="31" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2119#2367#0" expanded="true" />
-                <element signature="e#2366#2367#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileSudokuBoardDao.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/FileSudokuBoardDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-833">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileExeption.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/FileExeption.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://69ce39ed-ddd2-4571-829e-f6e8493589f1/schema/APP/table/SUDOKUBOARDS">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-              <folding>
-                <element signature="e#104#105#0" expanded="true" />
-                <element signature="e#134#135#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="126">
+              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SudokuBoardTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Model/src/test/java/pl/comp/SudokuBoardTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="199" column="39" selection-start-line="199" selection-start-column="35" selection-end-line="199" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/Dao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SudokuField.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+            <state relative-caret-position="84">
+              <caret line="9" column="84" selection-start-line="9" selection-start-column="84" selection-end-line="9" selection-end-column="84" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LevelGame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/LevelGame.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/69ce39ed-ddd2-4571-829e-f6e8493589f1/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="135" column="21" selection-start-line="128" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
+            <state relative-caret-position="126">
+              <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerAutors.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/ControllerAutors.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -164,9 +145,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sys</find>
       <find>chec</find>
-      <find>get</find>
       <find>tes</find>
       <find>ap</find>
       <find>jac</find>
@@ -185,7 +164,17 @@
       <find>ra</find>
       <find>textField</find>
       <find>Integ</find>
-      <find>file</find>
+      <find>new</find>
+      <find>derbyDB</find>
+      <find>conne</find>
+      <find>driver</find>
+      <find>props</find>
+      <find>forp</find>
+      <find>prop</find>
+      <find>Class</find>
+      <find>clas</find>
+      <find>dri</find>
+      <find>get</find>
     </findStrings>
     <replaceStrings>
       <replace>text</replace>
@@ -199,6 +188,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/../Polibuda/SEMESTR_4/Komponentowe/SudokuBoard.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/exercise/Point.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/exercise/SudokuSolver.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/exercise/BacktrackingSudokuSolver.java" />
         <option value="$PROJECT_DIR$/src/test/java/pl/exercise/AppTest.java" />
@@ -210,17 +202,14 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/exercise/Dao.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/exercise/FileSudokuBoardDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/pl/exercise/SudokuBoardTest.java" />
-        <option value="$PROJECT_DIR$/Model/pom.xml" />
         <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuBox.java" />
         <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuRow.java" />
         <option value="$PROJECT_DIR$/View/SudokuView.fxml" />
         <option value="$PROJECT_DIR$/View/View.fxml" />
         <option value="$PROJECT_DIR$/View/pom.xml" />
         <option value="$PROJECT_DIR$/View/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuNineFields.java" />
         <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuColumn.java" />
-        <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuField.java" />
         <option value="$PROJECT_DIR$/View/sample/EasyGame.java" />
         <option value="$PROJECT_DIR$/View/sample/MediumGame.java" />
         <option value="$PROJECT_DIR$/View/sample/HardGame.java" />
@@ -234,30 +223,24 @@
         <option value="$PROJECT_DIR$/View/src/main/java/bundles/Bundle_pl_PL.java" />
         <option value="$PROJECT_DIR$/View/src/main/resources/fxml/menuOne.fxml" />
         <option value="$PROJECT_DIR$/View/src/main/resources/fxml/autors.fxml" />
-        <option value="$PROJECT_DIR$/Model/src/main/resources/logging.properties" />
-        <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/App.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/idea64.vmoptions" />
-        <option value="$PROJECT_DIR$/View/src/main/resources/logging/logging.properties" />
-        <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuBoard.java" />
         <option value="$PROJECT_DIR$/View/src/main/java/pl/comp/Main.java" />
-        <option value="$PROJECT_DIR$/View/src/main/java/pl/comp/EasyGame.java" />
-        <option value="$PROJECT_DIR$/View/src/main/java/pl/comp/HardGame.java" />
-        <option value="$PROJECT_DIR$/View/src/main/java/pl/comp/MediumGame.java" />
+        <option value="$PROJECT_DIR$/View/src/main/java/pl/comp/Controller.java" />
         <option value="$PROJECT_DIR$/View/src/main/java/pl/comp/ControllerAutors.java" />
         <option value="$PROJECT_DIR$/View/src/main/java/pl/comp/LevelGame.java" />
-        <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/FileExeption.java" />
-        <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/Dao.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/17b46c6d-2697-4d2a-bb41-fdc98e23ba3e/console.sql" />
+        <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/SimpleApp.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/FileSudokuBoardDao.java" />
-        <option value="$PROJECT_DIR$/View/src/main/java/pl/comp/Controller.java" />
-        <option value="$PROJECT_DIR$/Model/src/test/java/pl/comp/SudokuBoardTest.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9c3b0b5d-8726-4b10-a758-54af2d538548/console.sql" />
+        <option value="$PROJECT_DIR$/localDatabase/MyDbTest/SimpleApp.java" />
+        <option value="$PROJECT_DIR$/Model/pom.xml" />
+        <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuBoard.java" />
+        <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuField.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/69ce39ed-ddd2-4571-829e-f6e8493589f1/console.sql" />
+        <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/App.java" />
+        <option value="$PROJECT_DIR$/Model/src/main/java/pl/comp/JdbcSudokuBoardDao.java" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -273,51 +256,14 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="ModelProject" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="SudokuGameProject" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="SudokuGameProject" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="View" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="View" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="View" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="View" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-          <item name="pl.comp:ModelProject:2.0-SNAPSHOT" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -325,112 +271,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="comp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="comp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="logging" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OurSudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OurSudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -477,48 +318,112 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BranchSudoku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BranchSudoku" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BranchSudoku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BranchSudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BranchSudoku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BranchSudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BranchSudoku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BranchSudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BranchSudoku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BranchSudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BranchSudoku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BranchSudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="comp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BranchSudoku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BranchSudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="nextDatabase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BranchSudoku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BranchSudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="nextDatabase" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BranchSudoku" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BranchSudoku" type="462c0819:PsiDirectoryNode" />
+              <item name="nextDatabase" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Sudoku" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="derby.remote&#10;derby" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="branchsudoku" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560503369056" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560716428685" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/View" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/nextDatabase/lib/Sudoku" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.32988507" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="project.structure.side.proportion" value="0.38390803" />
+    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/View/src/main/resources/logging" />
-      <recent name="$PROJECT_DIR$/View/src/main/resources/fxml" />
-      <recent name="$PROJECT_DIR$/View/src/main/resources" />
-      <recent name="$PROJECT_DIR$/View/src/main/java/java" />
-      <recent name="$PROJECT_DIR$/View" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="pl.exercise" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\BranchSudoku\nextDatabase\lib" />
+      <recent name="D:\BranchSudoku" />
+      <recent name="D:\BranchSudoku\MyDbTestJava" />
+      <recent name="D:\BranchSudoku\localDatabase\MyDbTest" />
+      <recent name="$PROJECT_DIR$/View/src/main/resources/fxml" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pl.comp" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\BranchSudoku\nextDatabase\lib" />
+      <recent name="D:\BranchSudoku\localDatabase\MyDbTest" />
+      <recent name="D:\BranchSudoku\Model\src\main\java\pl\comp" />
       <recent name="$PROJECT_DIR$/View/src/main/resources/fxml" />
-      <recent name="$PROJECT_DIR$/View/src/main/java/pl/comp" />
-      <recent name="$PROJECT_DIR$/View/src/main/java/java" />
-      <recent name="$PROJECT_DIR$/View/src/main/java" />
-      <recent name="$PROJECT_DIR$/View/sample" />
+      <recent name="$PROJECT_DIR$/View/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -533,19 +438,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.App (1)">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.comp.App" />
-      <module name="Model" />
+      <module name="ModelProject" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="pl.comp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="java.Main" />
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.comp.App" />
       <module name="View" />
       <extension name="coverage">
         <pattern>
@@ -553,6 +466,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.comp.Main" />
@@ -563,52 +479,26 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="SudokuBoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Model" />
+    <configuration name="SimpleApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.comp.SimpleApp" />
+      <module name="ModelProject" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="pl.comp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="pl.comp" />
-      <option name="MAIN_CLASS_NAME" value="pl.comp.SudokuBoardTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="SudokuBoardTest.SudokuBoardClone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Model" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.comp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="pl.comp" />
-      <option name="MAIN_CLASS_NAME" value="pl.comp.SudokuBoardTest" />
-      <option name="METHOD_NAME" value="SudokuBoardClone" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+    <configuration name="derby.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/derby.jar" />
+      <method v="2" />
     </configuration>
     <configuration name="Sudoku [checkstyle:checkstyle]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
@@ -633,6 +523,7 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration name="Sudoku [install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
@@ -657,7 +548,7 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
-      <method>
+      <method v="2">
         <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="checkstyle:check" />
         <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="jacoco:report" />
       </method>
@@ -683,28 +574,24 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" EXPLICIT_BUILD_TARGET_NAME="all">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
+      <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.SimpleApp" />
+      <item itemvalue="Application.App (1)" />
+      <item itemvalue="JAR Application.derby.jar" />
       <item itemvalue="Maven.Sudoku [checkstyle:checkstyle]" />
       <item itemvalue="Maven.Sudoku [install]" />
-      <item itemvalue="Application.Main (2)" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.SudokuBoardTest.SudokuBoardClone" />
-      <item itemvalue="JUnit.SudokuBoardTest" />
-      <item itemvalue="Application.App" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.SudokuBoardTest" />
+        <item itemvalue="Application.App (1)" />
+        <item itemvalue="JAR Application.derby.jar" />
         <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.SudokuBoardTest.SudokuBoardClone" />
-        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.SimpleApp" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -773,9 +660,16 @@
       <workItem from="1559593651654" duration="1445000" />
       <workItem from="1559655833704" duration="5967000" />
       <workItem from="1559731257080" duration="2087000" />
-      <workItem from="1560503271902" duration="149000" />
-      <workItem from="1560519312827" duration="7052000" />
-      <workItem from="1560581163814" duration="4301000" />
+      <workItem from="1560503271902" duration="1875000" />
+      <workItem from="1560542068464" duration="2709000" />
+      <workItem from="1560545037933" duration="280000" />
+      <workItem from="1560585295085" duration="4953000" />
+      <workItem from="1560590709646" duration="5735000" />
+      <workItem from="1560599941195" duration="546000" />
+      <workItem from="1560600517491" duration="8285000" />
+      <workItem from="1560624019964" duration="8370000" />
+      <workItem from="1560678235481" duration="24073000" />
+      <workItem from="1560765783487" duration="1456000" />
     </task>
     <task id="LOCAL-00001" summary="Poprawa read i testy pokrywające ( brak pokrycia dla wyjątków)">
       <created>1557247514401</created>
@@ -798,17 +692,35 @@
       <option name="project" value="LOCAL" />
       <updated>1558948716598</updated>
     </task>
-    <task id="LOCAL-00004" summary="Logi">
-      <created>1560530378962</created>
+    <task id="LOCAL-00004" summary="z zajec, pamietaj ze to nie do konca dzialalo">
+      <created>1560503510955</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1560530378962</updated>
+      <updated>1560503510956</updated>
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="SudokuBoardTest - 2019.05.07 at 18h 38m 27s.xml">
+      <configuration name="SudokuBoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SudokuBoardTest - 2019.05.07 at 18h 40m 41s.xml">
+      <configuration name="SudokuBoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SudokuBoardTest - 2019.05.10 at 20h 02m 20s.xml">
+      <configuration name="SudokuBoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SudokuBoardTest - 2019.05.10 at 20h 08m 21s.xml">
+      <configuration name="SudokuBoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SudokuBoardTest - 2019.05.10 at 20h 08m 42s.xml">
+      <configuration name="SudokuBoardTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SudokuBoardTest - 2019.05.11 at 08h 46m 44s.xml">
+      <configuration name="SudokuBoardTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="SudokuBoardTest - 2019.05.11 at 09h 24m 14s.xml">
       <configuration name="SudokuBoardTest" configurationId="JUnit" />
     </history-entry>
@@ -821,27 +733,9 @@
     <history-entry file="SudokuBoardTest_InitialSudokuBoard - 2019.05.25 at 13h 18m 25s.xml">
       <configuration name="SudokuBoardTest.InitialSudokuBoard" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SudokuBoardTest - 2019.06.14 at 15h 41m 07s.xml">
-      <configuration name="SudokuBoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SudokuBoardTest - 2019.06.14 at 15h 48m 10s.xml">
-      <configuration name="SudokuBoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SudokuBoardTest - 2019.06.15 at 09h 12m 04s.xml">
-      <configuration name="SudokuBoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SudokuBoardTest - 2019.06.15 at 09h 26m 31s.xml">
-      <configuration name="SudokuBoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SudokuBoardTest - 2019.06.15 at 09h 26m 35s.xml">
-      <configuration name="SudokuBoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SudokuBoardTest - 2019.06.15 at 09h 28m 22s.xml">
-      <configuration name="SudokuBoardTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196868000" />
+    <option name="totallyTimeSpent" value="243153000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -853,72 +747,74 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="26" width="1600" height="874" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32486632" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32486632" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.15057915" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.4237968" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29010695" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3275401" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2921493" />
-      <window_info anchor="right" id="Database" order="4" weight="0.32885906" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20201342" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24903475" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3529412" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32947233" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Maven" order="6" weight="0.3295302" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.47025496" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39518413" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32577905" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.42351276" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" weight="0.33144477" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3243626" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32719547" />
+      <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.49932885" weight="0.33144477" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24899329" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32885906" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" weight="0.3295302" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="9" weight="0.32947233" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32947233" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Maven" order="7" weight="0.3295302" />
-      <window_info id="Designer" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2072072" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28475937" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.24903475" />
-      <window_info id="Capture Tool" order="5" />
+      <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3275401" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28475937" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3970588" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3262032" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.4237968" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3275401" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32486632" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2072072" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.4237968" />
-      <window_info anchor="right" id="Maven Projects" order="10" weight="0.32947233" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.32947233" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3262032" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32947233" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3970588" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.24903475" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32947233" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.3295302" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Maven Projects" order="10" weight="0.32947233" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -959,9 +855,20 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Poprawa read i testy pokrywające ( brak pokrycia dla wyjątków)" />
@@ -969,51 +876,24 @@
     <MESSAGE value="Dzielenie na Moduly View + Model" />
     <MESSAGE value="Zadanie 10, do ruszenia Bundle" />
     <MESSAGE value="z zajec, pamietaj ze to nie do konca dzialalo" />
-    <MESSAGE value="Default Changelist" />
-    <MESSAGE value="Logi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logi" />
+    <option name="LAST_COMMIT_MESSAGE" value="z zajec, pamietaj ze to nie do konca dzialalo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/View/src/main/java/pl/comp/Controller.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/View/src/main/java/pl/comp/Controller.java</url>
           <line>104</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuBoard.java</url>
-          <line>18</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/View/src/main/java/pl/comp/Controller.java</url>
-          <line>83</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/View/src/main/java/pl/comp/Controller.java</url>
-          <line>79</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/View/src/main/java/pl/comp/Controller.java</url>
-          <line>84</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Model/src/main/java/pl/comp/FileSudokuBoardDao.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1026,27 +906,174 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar!/org/apache/commons/collections/list/FixedSizeList.class">
+    <entry file="file://$PROJECT_DIR$/View/src/main/resources/bundles/bundle_pl.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="63">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/src/test/java/pl/comp/SudokuBoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="201" column="20" selection-start-line="201" selection-start-column="20" selection-end-line="201" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/Node.java" />
-    <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/BacktrackingSudokuSolver.java">
+    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/ControllerMenu.java" />
+    <entry file="file://$PROJECT_DIR$/View/src/main/resources/fxml/menu.fxml" />
+    <entry file="file://$PROJECT_DIR$/View/src/main/resources/fxml/menuThree.fxml" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="160">
+          <caret line="541" selection-start-line="541" selection-end-line="541" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuNineFields.java">
+    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="210">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/src/main/resources/bundles/bundle_en.properties">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/src/main/resources/fxml/menuOne.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="uml://MAVEN/pl.comp:ModelProject:2.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>pl.comp:ModelProject:2.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="" y="">pl.comp:ModelProject:2.0-SNAPSHOT</node>
+            <node x="" y="">junit:junit:jar:4.11</node>
+            <node x="" y="">junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3</node>
+            <node x="" y="">commons-collections:commons-collections:jar:3.2.1</node>
+            <node x="" y="">org.apache.commons:commons-lang3:jar:3.8.1</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.apache.maven:maven-settings:jar:3.0</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.apache.maven:maven-settings:jar:3.0/org.codehaus.plexus:plexus-utils:jar:2.0.4</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.apache.maven:maven-settings-builder:jar:3.0</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.apache.maven:maven-settings-builder:jar:3.0/org.codehaus.plexus:plexus-utils:jar:1.5.1</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.apache.maven:maven-repository-metadata:jar:3.0</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.apache.maven:maven-repository-metadata:jar:3.0/org.codehaus.plexus:plexus-utils:jar:1.5.1</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.apache.maven:maven-artifact:jar:3.0</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.apache.maven:maven-artifact:jar:3.0/org.codehaus.plexus:plexus-utils:jar:1.5.1</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.apache.maven:maven-model-builder:jar:3.0</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.apache.maven:maven-model-builder:jar:3.0/org.codehaus.plexus:plexus-utils:jar:1.5.1</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.apache.maven:maven-aether-provider:jar:3.0</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.sonatype.aether:aether-impl:jar:1.7</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.sonatype.aether:aether-impl:jar:1.7/org.sonatype.aether:aether-spi:jar:1.7</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.sonatype.aether:aether-api:jar:1.7</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.sonatype.aether:aether-util:jar:1.7</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2/org.codehaus.plexus:plexus-component-annotations:jar:1.5.4</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2/org.codehaus.plexus:plexus-utils:jar:2.0.5</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2/org.sonatype.sisu:sisu-inject-bean:jar:1.4.2</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2/org.sonatype.sisu:sisu-inject-bean:jar:1.4.2/org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.codehaus.plexus:plexus-interpolation:jar:1.14</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.codehaus.plexus:plexus-utils:jar:1.5.1</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.codehaus.plexus:plexus-classworlds:jar:2.2.3</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.codehaus.plexus:plexus-component-annotations:jar:1.5.5</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3/org.codehaus.plexus:plexus-utils:jar:1.5.5</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-core:jar:3.0/org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3/org.sonatype.plexus:plexus-cipher:jar:1.4</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-model:jar:3.0</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-model:jar:3.0/org.codehaus.plexus:plexus-utils:jar:1.5.1</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.apache.maven:maven-plugin-api:jar:3.0</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.twdata.maven:mojo-executor:jar:2.2.0/org.codehaus.plexus:plexus-utils:jar:1.5.1</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.codehaus.plexus:plexus-archiver:jar:2.1.1</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.codehaus.plexus:plexus-archiver:jar:2.1.1/org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.codehaus.plexus:plexus-archiver:jar:2.1.1/org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1/junit:junit:jar:3.8.1</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.codehaus.plexus:plexus-archiver:jar:2.1.1/org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1/org.codehaus.plexus:plexus-utils:jar:1.0.4</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.codehaus.plexus:plexus-archiver:jar:2.1.1/org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1/classworlds:classworlds:jar:1.1-alpha-2</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.codehaus.plexus:plexus-archiver:jar:2.1.1/org.codehaus.plexus:plexus-utils:jar:3.0</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.codehaus.plexus:plexus-archiver:jar:2.1.1/org.codehaus.plexus:plexus-io:jar:2.0.3</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/org.codehaus.plexus:plexus-archiver:jar:2.1.1/org.codehaus.plexus:plexus-io:jar:2.0.3/org.codehaus.plexus:plexus-utils:jar:1.5.1</node>
+            <node x="" y="">com.zenjava:javafx-maven-plugin:jar:8.1.2/javafx-packager:javafx-packager:jar:1.8.0_20</node>
+            <node x="" y="">org.apache.derby:derby:jar:10.11.1.1</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.2511111111111111" x="2384.0" y="354.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/src/main/resources/fxml/autors.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="74" column="31" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/ControllerAutors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/src/main/java/bundles/Bundle_pl_PL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/811dd6d9-d1ea-4ea8-8bc3-6d05b07ce555/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/17b46c6d-2697-4d2a-bb41-fdc98e23ba3e/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/localDatabase/MyDbTest/db.lck" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/071d192a-728f-4bfb-841d-b7a58798670c/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/SimpleApp.java" />
+    <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/FileExeption.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuColumn.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1055,205 +1082,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/sample/Main.java" />
-    <entry file="file://$PROJECT_DIR$/View/sample/EasyGame.java" />
-    <entry file="file://$PROJECT_DIR$/View/sample/MediumGame.java" />
-    <entry file="file://$PROJECT_DIR$/View/sample/HardGame.java" />
-    <entry file="file://$PROJECT_DIR$/View/sample/LevelGame.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/reflect/Method.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Thread.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/io/FileInputStream.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class" />
-    <entry file="file://$PROJECT_DIR$/View/src/main/java/bundles/Engl_bundle_en_UK.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/control/MenuItem.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/Scene.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/event/Event.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
-    <entry file="file://$PROJECT_DIR$/View/src/main/resources/bundles/bundle_pl.properties">
-      <provider editor-type-id="ResourceBundle" />
+    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/LevelGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="3" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="1764">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/ControllerMenu.java" />
-    <entry file="file://$PROJECT_DIR$/View/src/main/resources/fxml/menu.fxml" />
-    <entry file="file://$PROJECT_DIR$/View/src/main/resources/fxml/menuThree.fxml" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Integer.java" />
-    <entry file="file://$PROJECT_DIR$/View/src/main/resources/bundles/bundle_en.properties">
-      <provider editor-type-id="ResourceBundle" />
+    <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/BacktrackingSudokuSolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        <state relative-caret-position="126">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/src/main/java/bundles/Bundle_pl_PL.java">
+    <entry file="file://$PROJECT_DIR$/localDatabase/MyDbTest/service.properties" />
+    <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuBoardDaoFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="42">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/src/main/resources/fxml/autors.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="das://9c3b0b5d-8726-4b10-a758-54af2d538548/schema/USER/table/SUDOKU" />
+    <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/Dao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="94" selection-start-line="24" selection-start-column="94" selection-end-line="24" selection-end-column="94" />
+        <state relative-caret-position="84">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/src/main/resources/fxml/menuOne.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/net/URLClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="46" column="102" selection-start-line="46" selection-start-column="102" selection-end-line="46" selection-end-column="112" />
+        <state relative-caret-position="159">
+          <caret line="381" selection-start-line="381" selection-end-line="381" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/javacodegeeks.log.1.lck" />
-    <entry file="file://$PROJECT_DIR$/Model/javacodegeeks.log.1" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/idea64.vmoptions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="142" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="142" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/localDatabase/MyDbTest/SimpleApp.class" />
     <entry file="file://$PROJECT_DIR$/View/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+        <state relative-caret-position="252">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/App.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+        <state relative-caret-position="189">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9c3b0b5d-8726-4b10-a758-54af2d538548/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="263" selection-start-line="263" selection-end-line="263" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/localDatabase/MyDbTest/SimpleApp.java" />
     <entry file="file://$PROJECT_DIR$/Model/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/abcffc5a-dc9c-48fd-aaf0-195c8c9ee23b/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1f8189f7-7ff4-4647-b9f4-b76e4eaa9a68/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f045b003-9dd6-401d-9713-64636dd05e9a/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nextDatabase/lib/Sudoku/log/README_DO_NOT_TOUCH_FILES.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nextDatabase/lib/Sudoku/service.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://9c3b0b5d-8726-4b10-a758-54af2d538548/schema/USER/table/SUDOKUBOARD" />
+    <entry file="das://69ce39ed-ddd2-4571-829e-f6e8493589f1/schema/USER/table/SUDOKUBOARD" />
+    <entry file="das://69ce39ed-ddd2-4571-829e-f6e8493589f1/schema/APP/table/SUDOKUBOARD/index/SQL190616174647890" />
+    <entry file="das://69ce39ed-ddd2-4571-829e-f6e8493589f1/schema/APP/table/SUDOKUBOARD" />
+    <entry file="das://69ce39ed-ddd2-4571-829e-f6e8493589f1/schema/APP/table/SUDOKUBOARDS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/EasyGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/HardGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/MediumGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/src/main/resources/logging/logging.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/ControllerAutors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/SudokuField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+        <state relative-caret-position="84">
+          <caret line="9" column="84" selection-start-line="9" selection-start-column="84" selection-end-line="9" selection-end-column="84" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/LevelGame.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/69ce39ed-ddd2-4571-829e-f6e8493589f1/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="135" column="21" selection-start-line="128" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="94" column="20" selection-start-line="94" selection-start-column="20" selection-end-line="94" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2119#2367#0" expanded="true" />
-            <element signature="e#2366#2367#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/FileSudokuBoardDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+        <state relative-caret-position="-833">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/JdbcSudokuBoardDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="75" column="31" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/FileExeption.java">
+    <entry file="file://$PROJECT_DIR$/Model/src/main/java/pl/comp/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding>
-            <element signature="e#104#105#0" expanded="true" />
-            <element signature="e#134#135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/src/main/java/pl/comp/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/src/test/java/pl/comp/SudokuBoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="199" column="39" selection-start-line="199" selection-start-column="35" selection-end-line="199" selection-end-column="39" />
+        <state relative-caret-position="357">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1266,7 +1236,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.32988507" />
+                <option value="0.38390803" />
               </list>
             </option>
           </splitter-proportions>
@@ -1278,7 +1248,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.32988507" />
+                <option value="0.38390803" />
               </list>
             </option>
           </splitter-proportions>
@@ -1289,7 +1259,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.32988507" />
+                <option value="0.38390803" />
               </list>
             </option>
           </splitter-proportions>
@@ -1301,7 +1271,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.32988507" />
+                <option value="0.38390803" />
               </list>
             </option>
           </splitter-proportions>
@@ -1309,11 +1279,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Model</last-edited>
+          <last-edited>ModelProject</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.32988507" />
+                <option value="0.38390803" />
               </list>
             </option>
           </splitter-proportions>
@@ -1321,11 +1291,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: commons-collections:commons-collections:3.2.1</last-edited>
+          <last-edited>Maven: org.apache.derby:derby:10.13.1.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.32988507" />
+                <option value="0.38390803" />
               </list>
             </option>
           </splitter-proportions>
@@ -1335,6 +1305,9 @@
   </component>
   <component name="mavenExecuteGoalHistory">
     <option value="$PROJECT_DIR$" />
+    <option value="derby.storage.useDefaultFilePermissions=true" />
+    <option value="set &quot;DERBY_OPTS=-Duser.language=en -Dderby.drda.debug=true&quot;  startNetworkServer.bat" />
+    <option value="-v" />
     <option value="jacoco:check" />
     <option value="clean:clean" />
     <option value="clean jacoco:prepare-agent install" />

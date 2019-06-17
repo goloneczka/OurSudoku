@@ -59,13 +59,6 @@ public class FileSudokuBoardDao implements Dao<SudokuBoard>  {
             throw new FileExeption("Nie mozna zapisac").initCause(new FileNotFoundException("Nie mozna odnalez pliku"));
 
         }
-      /*  try {
-            throw new ArithmeticException("Top Level Exception.")
-                    .initCause(new IOException("IO cause."));
-        } catch(ArithmeticException ae) {
-            System.out.println("Caught : " + ae);
-            System.out.println("Actual cause: "+ ae.getCause());
-        }*/
     }
 
     @Override

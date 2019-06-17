@@ -14,25 +14,29 @@ public class App {
         System.out.println();
     }
 
-    public static void main(final String[] args) throws IOException {
+    public static void main(final String[] args) throws Throwable {
 
 
         SudokuBoard sudokuBoard = new SudokuBoard();
-      /*  sudokuBoard.set(2, 2, 2);
+        sudokuBoard.set(2, 2, 2);
         SudokuSolver sudokuSolver = new BacktrackingSudokuSolver();
         sudokuSolver.solve(sudokuBoard);
         System.out.println(sudokuBoard);
         sudokuBoard.clearBoard();
-       // display(sudokuBoard);
+        display(sudokuBoard);
         sudokuSolver.solve(sudokuBoard);
         display(sudokuBoard);
 
+        Dao<SudokuBoard> dao = new JdbcSudokuBoardDao("fileDataBase");
+        //dao.write(sudokuBoard);
 
-        Dao<SudokuBoard> dao = SudokuBoardDaoFactory.getFileDao("fileSudokuBoardDao.txt");
         System.out.println(dao.read());
 
-        Dao<SudokuBoard> dao1 = SudokuBoardDaoFactory.getFileDao("fileSudokuBoardDao1.txt");
-        dao1.write(sudokuBoard);*/
+//        Dao<SudokuBoard> dao = SudokuBoardDaoFactory.getFileDao("fileSudokuBoardDao.txt");
+//        System.out.println(dao.read());
+//
+//        Dao<SudokuBoard> dao1 = SudokuBoardDaoFactory.getFileDao("fileSudokuBoardDao1.txt");
+//        dao1.write(sudokuBoard);
 
 
 

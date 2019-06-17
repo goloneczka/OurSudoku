@@ -5,7 +5,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class SudokuField implements Comparable<SudokuField>, Cloneable {
+import java.io.Serializable;
+
+public class SudokuField implements Comparable<SudokuField>, Cloneable, Serializable {
 
     private int x = 0;
     private int y = 0;

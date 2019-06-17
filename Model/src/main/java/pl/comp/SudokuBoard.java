@@ -8,6 +8,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.logging.*;
 import static org.apache.commons.lang3.builder.ToStringStyle.SIMPLE_STYLE;
 
 
-public class SudokuBoard implements Cloneable {
+public class SudokuBoard implements Cloneable, Serializable {
 
 
     public static Logger LOGGER;
